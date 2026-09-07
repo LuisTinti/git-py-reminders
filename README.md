@@ -1,5 +1,5 @@
 # 📚
-**Para meus estudos de python e alguns códigos git.**
+Para meus estudos de **python** e alguns **códigos git**.
 # 💻 Git Notes: Terminal Commands Guide
 
 This repository contains my personal notes and quick references for essential **Git** commands. The main goal is to serve as a practical, day-to-day cheat sheet for using Git via the terminal.
