@@ -19,7 +19,7 @@ janela = tk.Tk()
 janela.title("Máquina de números")
 janela.geometry("400x300")
 janela.config(bg="#ece3e3")
-janela.resizable(False, False)
+janela.resizable(True, True)
 
 # Variável para armazenar o texto do visor
 visor = tk.StringVar()
