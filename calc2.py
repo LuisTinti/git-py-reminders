@@ -17,9 +17,9 @@ def calcular():
 # Configuração da janela principal
 janela = tk.Tk()
 janela.title("Máquina de números")
-janela.geometry("400x300")
+janela.geometry("300x450")
 janela.config(bg="#ece3e3")
-janela.resizable(True, True)
+janela.resizable(False, False)
 
 # Variável para armazenar o texto do visor
 visor = tk.StringVar()
