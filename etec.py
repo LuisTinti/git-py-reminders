@@ -7,5 +7,5 @@ def decimal_to_binary(decimal):
         binary = str(rest) + binary
         decimal = decimal // 2
     return binary
-print(decimal_to_binary(200))
+print(decimal_to_binary(300))
     
