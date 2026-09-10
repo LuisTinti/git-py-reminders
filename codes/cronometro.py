@@ -14,7 +14,7 @@ class Cronometro:
         
         # Elemento de texto do cronômetro
         self.label_tempo = tk.Label(
-            root, text="00:00:00", font=("Helvetica", 36, "bold"), 
+            root, text="00:00:00", font=("Times New Roman", 36, "bold"), 
             bg="#2c3e50", fg="#ecf0f1"
         )
         self.label_tempo.pack(pady=30)
@@ -26,19 +26,19 @@ class Cronometro:
         # Configuração dos botões
         self.botao_iniciar = tk.Button(
             self.frame_botoes, text="Iniciar", command=self.iniciar, 
-            font=("Arial", 10, "bold"), bg="#2ecc71", fg="white", width=8
+            font=("Times New Roman", 10, "bold"), bg="#2ecc71", fg="white", width=8
         )
         self.botao_iniciar.grid(row=0, column=0, padx=5)
         
         self.botao_pausar = tk.Button(
             self.frame_botoes, text="Pausar", command=self.pausar, 
-            font=("Arial", 10, "bold"), bg="#f1c40f", fg="white", width=8
+            font=("Times New Roman", 10, "bold"), bg="#f1c40f", fg="white", width=8
         )
         self.botao_pausar.grid(row=0, column=1, padx=5)
         
         self.botao_zerar = tk.Button(
             self.frame_botoes, text="Zerar", command=self.zerar, 
-            font=("Arial", 10, "bold"), bg="#e74c3c", fg="white", width=8
+            font=("Times New Roman", 10, "bold"), bg="#e74c3c", fg="white", width=8
         )
         self.botao_zerar.grid(row=0, column=2, padx=5)
 
