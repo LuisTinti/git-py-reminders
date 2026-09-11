@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Hera - Resgate e Proteção Felina | Botucatu-SP</title>
+    <style>
+        /* CSS RESET E VARIÁVEIS DE CORES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #6C5CE7; /* Roxo moderno */
+            --secondary-color: #A29BFE;
+            --accent-color: #FF7675; /* Coral para destaques/doação */
+            --text-dark: #2D3436;
+            --bg-light: #F9F9FB;
+            --white: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* NAVEGAÇÃO */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-nav {
+            background-color: var(--accent-color);
+            color: var(--white) !important;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(108, 92, 231, 0.8), rgba(162, 155, 254, 0.8)), 
+                        url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1350&q=80') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .btn-main:hover {
+            transform: scale(1.05);
+        }
+
+        /* SEÇÃO SOBRE / HISTÓRIA */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background-color: var(--accent-color);
+            display: block;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* CARDS DE IMPACTO */
+        .stats {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        /* AJUDE / PIX */
+        .help-section {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .pix-box {
+            background-color: var(--bg-light);
+            border: 2px dashed var(--primary-color);
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .pix-box strong {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        /* CONTATO / REDES SOCIAIS */
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #E1306C; /* Cor Instagram */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Em projetos avançados, pode-se adicionar menu hambúrguer */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVEGAÇÃO -->
+    <header>
+        <nav>
+            <div class="logo">
+                🐾 Projeto Hera
+            </div>
+            <ul class="nav-links">
+                <li><a href="#historia">Nossa História</a></li>
+                <li><a href="#causa">A Causa</a></li>
+                <li><a href="#ajuda">Como Ajudar</a></li>
+                <li><a href="#contato" class="btn-nav">Adotar / Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO / BANNER PRINCIPAL -->
+    <section class="hero">
+        <h1>Transformando a vida dos felinos em Botucatu</h1>
+        <p>Resgate, reabilitação, amor e lares responsáveis para gatos em situação de vulnerabilidade.</p>
+        <a href="#ajuda" class="btn-main">Apoie o Projeto Hera</a>
+    </section>
+
+    <!-- HISTÓRIA E FUNDAÇÃO -->
+    <section id="historia" class="container">
+        <h2 class="section-title">Como o Projeto Nasceu</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>O <strong>Projeto Hera</strong> nasceu da dedicação e do amor incondicional pelos animais da protetora <strong>Eliane Rosa</strong>, na cidade de Botucatu/SP. O projeto teve início quando a necessidade de proteger felinos em situação de abandono e maus-tratos se tornou urgente na região.</p>
+                <p>O nome <em>Hera</em> homenageia a força da maternidade e proteção, valores que fundamentam a criação do abrigo. O que começou com pequenos resgates individuais transformou-se em uma grande rede de proteção que hoje abriga e cuida com dignidade de dezenas de gatos.</p>
+                <p>A fundação do abrigo foi motivada não apenas pela necessidade de resgatar, mas por acolher com carinho especial gatos idosos, machucados ou portadores de síndromes e vírus felinos (como FIV e FeLV), garantindo a eles tratamento veterinário, castração e a oportunidade de encontrar uma família definitiva.</p>
+            </div>
+            <div class="about-text" style="background-color: #f1f0ff; padding: 25px; border-radius: 8px;">
+                <h3 style="color: var(--primary-color); margin-bottom: 10px;">Nossa Missão</h3>
+                <p>Oferecer abrigo seguro, alimentação, saúde e afeto para gatos resgatados em Botucatu, além de conscientizar a comunidade sobre a posse responsável e a importância da castração.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NÚMEROS / IMPACTO -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>+120</h3>
+                <p>Gatos Sob Cuidados</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Castrados e Vacinados</p>
+            </div>
+            <div class="stat-card">
+                <h3>Centenas</h3>
+                <p>De Finais Felizes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO AJUDAR -->
+    <section id="ajuda" class="container">
+        <h2 class="section-title">Como Ajudar o Projeto</h2>
+        <p style="text-align: center;">O Projeto Hera é mantido voluntariamente e depende exclusivamente de doações para ração, medicamentos e consultas veterinárias.</p>
+
+        <div class="help-section">
+            <h3>Faça uma Doação via PIX</h3>
+            <p>Qualquer valor faz a diferença na vida dos nossos gatinhos!</p>
+            
+            <div class="pix-box">
+                <p><strong>Chave PIX (E-mail ou Celular):</strong></p>
+                <p>projetohera.botucatu@gmail.com (Exemplo)</p>
+                <small style="color: #666;">Titular: Eliane Rosa (Projeto Hera)</small>
+            </div>
+            <br><br>
+            <p><strong>Outras formas de ajudar:</strong> Doação de ração para gatos, sachês, areia sanitária, medicamentos veterinários ou apadrinhando um gatinho do abrigo!</p>
+        </div>
+    </section>
+
+    <!-- CONTATO / INSTAGRAM -->
+    <section id="contato" class="container" style="text-align: center;">
+        <h2 class="section-title">Acompanhe e Adote</h2>
+        <p>Quer adotar um novo amigo ou ver as novidades diárias e resgates do abrigo?</p>
+        <p>Acesse o nosso perfil oficial no Instagram:</p>
+        
+        <a href="https://www.instagram.com/projetohera.botucatu/" target="_blank" class="social-link">
+            <span>📷 Siga @projetohera.botucatu</span>
+        </a>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 Projeto Hera Botucatu - Resgate e Proteção Felina. Todos os direitos reservados.</p>
+        <p><small>Desenvolvido com carinho para a causa animal 🐾</small></p>
+    </footer>
+
+</body>
+</html>
