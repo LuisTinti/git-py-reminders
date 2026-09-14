@@ -1,0 +1,11 @@
+# Ignora o ambiente virtual (onde ficam instaladas as bibliotecas)
+venv/
+.venv/
+
+# Ignora os caches automáticos gerados quando o Python roda
+**/__pycache__/
+*.pyc
+
+# Ignora configurações do seu editor de código (como VS Code ou PyCharm)
+.vscode/
+.idea/
