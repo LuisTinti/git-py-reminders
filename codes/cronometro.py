@@ -4,8 +4,8 @@ class Cronometro:
     def __init__(self, root):
         self.root = root
         self.root.title("Cronômetro")
-        self.root.geometry("600x400")
-        self.root.configure(bg="#2c3e50")
+        self.root.geometry("300x200")
+        self.root.configure(bg="#000408")
         
         # Variáveis de controle de tempo
         self.tempo_decorrido = 0
@@ -14,31 +14,31 @@ class Cronometro:
         
         # Elemento de texto do cronômetro
         self.label_tempo = tk.Label(
-            root, text="00:00:00", font=("Times New Roman", 36, "bold"), 
-            bg="#2c3e50", fg="#ecf0f1"
+            root, text="00:00:00", font=("Arial", 36, "bold"), 
+            bg="#000408", fg="#ecf0f1"
         )
         self.label_tempo.pack(pady=30)
         
         # Container para os botões
-        self.frame_botoes = tk.Frame(root, bg="#2c3e50")
+        self.frame_botoes = tk.Frame(root, bg="#000408")
         self.frame_botoes.pack()
         
         # Configuração dos botões
         self.botao_iniciar = tk.Button(
             self.frame_botoes, text="Iniciar", command=self.iniciar, 
-            font=("Times New Roman", 10, "bold"), bg="#2ecc71", fg="white", width=8
+            font=("Arial", 10, "bold"), bg="#2da05d", fg="white", width=8
         )
         self.botao_iniciar.grid(row=0, column=0, padx=5)
         
         self.botao_pausar = tk.Button(
             self.frame_botoes, text="Pausar", command=self.pausar, 
-            font=("Times New Roman", 10, "bold"), bg="#f1c40f", fg="white", width=8
+            font=("Arial", 10, "bold"), bg="#f1c40f", fg="white", width=8
         )
         self.botao_pausar.grid(row=0, column=1, padx=5)
         
         self.botao_zerar = tk.Button(
             self.frame_botoes, text="Zerar", command=self.zerar, 
-            font=("Times New Roman", 10, "bold"), bg="#e74c3c", fg="white", width=8
+            font=("Arial", 10, "bold"), bg="#e74c3c", fg="white", width=8
         )
         self.botao_zerar.grid(row=0, column=2, padx=5)
 
