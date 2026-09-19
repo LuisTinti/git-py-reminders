@@ -6,7 +6,7 @@ class Cronometro:
         self.root.title("Cronômetro")
         self.root.geometry("300x200")
         self.root.configure(bg="#000408")
-        self.root.resizable(True, True)
+        self.root.resizable(False, False)
         
         # Variáveis de controle de tempo
         self.tempo_decorrido = 0

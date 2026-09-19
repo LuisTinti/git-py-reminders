@@ -9,3 +9,4 @@ venv/
 # Ignora configurações do seu editor de código (como VS Code ou PyCharm)
 .vscode/
 .idea/
+test.py
