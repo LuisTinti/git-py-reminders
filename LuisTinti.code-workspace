@@ -4,11 +4,16 @@
 			"path": "../LuisTinti"
 		},
 		{
-			"path": "../../../projeto"
+			"path": "../teste"
 		},
 		{
 			"path": "."
+		},
+		{
+			"path": "../gta1-python-game"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "git-py-reminders"
+	}
 }
