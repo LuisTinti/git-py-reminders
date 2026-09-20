@@ -1,5 +1,7 @@
 # 📚
+
 Para meus estudos de **python** e alguns **códigos git**
+
 # 💻 Git Notes: Terminal Commands Guide
 
 This repository contains my personal notes and quick references for essential **Git** commands. The main goal is to serve as a practical, day-to-day cheat sheet for using Git via the terminal.
@@ -128,4 +130,3 @@ git reset --soft HEAD~1
 ---
 
 > 💡 **Pro Tip:** Keep an eye out for conflicts during `git merge` or `git pull`. The terminal will warn you if changes happen on the exact same line of the same file, letting you choose which version to keep before finalizing.
-
